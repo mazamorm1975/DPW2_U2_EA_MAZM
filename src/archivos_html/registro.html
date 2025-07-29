@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style.css">
+    <title>Registrar</title>
+</head>
+
+<body>
+    <header>
+        <nav class="menu-nav">
+            <a href="index.html" class="nav-link">Salir</a>
+            <a href="inicio.html" class="nav-link">Inicio</a>
+            <a href="ingresar.html" class="nav-link">Iniciar Sesión</a>
+        </nav>
+    </header>
+
+    <h1>Registro de Alumnos</h1>
+    <form id="form1" action="../archivos_php/guardar.php" method="post">
+
+        <div>
+            <label for="IDUsuario">Id_Usuario: </label>
+            <input type="text" name="IDUsuario" id="IDUsuario" value="" />
+        </div>
+        <br>
+        <div>
+            <label for="nombre">Nombre: </label>
+            <input type="text" name="nombre" id="nombre" value="" />
+        </div>
+        <br>
+        <div>
+            <label for="apellido_paterno">Apellido Paterno: </label>
+            <input type="text" name="apellido_paterno" id="apellido_paterno" value=""  />
+        </div>
+        <br>
+        <div>
+            <label for="apellido_materno">Apellido Materno: </label>
+            <input type="text" name="apellido_materno" id="apellido_materno" value="" />
+        </div>
+        <br>
+        <div>
+            <label for="edad">edad: </label>
+            <input type="text" name="edad" id="edad" value=""/>
+        </div>
+        <br>
+        <div>
+            <label for="sexo">Sexo: </label>
+                <label for="Masculino">Masculino</label>
+                <input type="radio" id="masculino" name="sexo" value="M" checked />
+                 <label for="Femenino">Femenino</label>
+                <input type="radio" id="femenino" name="sexo" value="F"  />
+            </select><br><br>
+        </div>
+        <br>
+        <div>
+            <label for="email">email: </label>
+            <input type="text" name="email" id="email" value=""  />
+        </div>
+        <br>
+        <div>
+            <label for="telefono">Telefono: </label>
+            <input type="text" name="telefono" id="telefono" value=""  />
+        </div>
+        <br>
+        <div>
+            <label for="tipo_usuario">Tipo_Usuario: </label>
+            <input type="text" name="tipo_usuario" id="tipo_usuario" value=""  />
+        </div>
+        <br>
+        <div>
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password"  />
+        </div>
+        <br>
+        <div>
+            <label for="confirmar">Confirmar_Password: </label>
+            <input type="password" name="confirmar" id="confirmar"  />
+        </div>
+        <br>
+        <div>
+            <input type="submit" name="registrar" value="Registrar" />
+        </div>
+    </form>
+
+</body>
+
+</html>
