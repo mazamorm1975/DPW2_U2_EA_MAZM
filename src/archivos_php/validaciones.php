@@ -46,6 +46,20 @@ function validarTipoUsuario($conexion, $arg1){
     return $existe > 0;
 }
 
+function consultarExamenes($conexion, $idUsuario) {
+    $sql = "SELECT t2.*, t1.nombre, t1.apellido_paterno, t1.apellido_materno
+                FROM examenes t2
+                INNER JOIN usuarios t1 ON t1.IDUsuario = t2.IDUsuario
+                WHERE t1.IDUsuario = ?";
+    $stmt = $conexion->prepare($sql);
+    $stmt->execute([$idUsuario]);
+    
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
 
 
 ?>
