@@ -14,9 +14,9 @@ if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo_usuario'] === 'ES'
     echo '
     <nav>
         <a href="../archivos_html/inicio.html">Inicio</a>
-        <a href="../archivos_html/validar_matricula.html">Consultar</a>
+        <a href="../archivos_php/validar_matricula.php">Consultar</a>
 		<a href="../archivos_html/registrar_examenes.html">Registrar</a>
-        <a href="../archivos_html/modificar.html">Modificar</a>
+        <a href="../archivos_php/modificar.php">Modificar</a>
         <a href="../archivos_html/eliminar.html">Eliminar</a>
         <a href="logout.php">Salir</a>
     </nav>

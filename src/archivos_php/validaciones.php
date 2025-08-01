@@ -57,6 +57,13 @@ function consultarExamenes($conexion, $idUsuario) {
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
+function obtenerIDUsuarioPorMatricula($dbh, $idUsuario) {
+    $stmt = $dbh->prepare("SELECT IDUsuario FROM usuarios WHERE IDUsuario = ?");
+    $stmt->execute([$idUsuario]);
+    $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $resultado ? $resultado['IDUsuario'] : null;
+}
+
 
 
 
