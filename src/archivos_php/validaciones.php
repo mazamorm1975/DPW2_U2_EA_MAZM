@@ -50,12 +50,28 @@ function consultarExamenes($conexion, $idUsuario) {
     $sql = "SELECT t2.*, t1.nombre, t1.apellido_paterno, t1.apellido_materno
                 FROM examenes t2
                 INNER JOIN usuarios t1 ON t1.IDUsuario = t2.IDUsuario
-                WHERE t1.IDUsuario = ?";
+                WHERE t1.IDUsuario = :id";
     $stmt = $conexion->prepare($sql);
-    $stmt->execute([$idUsuario]);
-    
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $stmt->bindParam(':id', $idUsuario);
+    $stmt->execute();
+    return $stmt;
 }
+
+function consultarExamenesPorFolio($conexion, $folio_examen, $aula_aplicacion) {
+    $sql = "SELECT t2.*, t1.nombre, t1.apellido_paterno, t1.apellido_materno
+                FROM examenes t2
+                INNER JOIN usuarios t1 ON t1.IDUsuario = t2.IDUsuario
+                WHERE t2.folio_examen = :folio AND aula_aplicacion = :aula";
+    $stmt = $conexion->prepare($sql);
+    $stmt->bindParam(':folio', $folio_examen);
+    $stmt->bindParam(':aula', $aula_aplicacion);
+    $stmt->execute();
+    return $stmt;
+}
+
+
+
+
 
 function obtenerIDUsuarioPorMatricula($dbh, $idUsuario) {
     $stmt = $dbh->prepare("SELECT IDUsuario FROM usuarios WHERE IDUsuario = ?");
@@ -63,6 +79,8 @@ function obtenerIDUsuarioPorMatricula($dbh, $idUsuario) {
     $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
     return $resultado ? $resultado['IDUsuario'] : null;
 }
+
+
 
 
 

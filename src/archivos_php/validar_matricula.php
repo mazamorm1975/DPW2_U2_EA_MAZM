@@ -47,19 +47,24 @@
       if (isset($_GET['validar']) && isset($_GET['matricula'])) {
         $matricula = $_GET['matricula'];
         $idUsuario = obtenerIDUsuarioPorMatricula($dbh, $matricula);
-
+        
         if($idUsuario !==null){
             
             $filas =  consultarExamenes($dbh, $idUsuario);
+            $filas->setFetchMode(PDO::FETCH_ASSOC);
+            $registros = $filas->fetchAll();
 
-             if (count($filas) > 0) {
-        $usuario = $filas[0]; 
-          echo '
+            if(count($registros) > 0) {
+                $usuario = $registros[0];
+            echo '
                 <div style="text-align: center; margin-bottom: 10px;">
                 <strong>Estudiante:</strong> ' . $usuario['nombre'] . ' ' . $usuario['apellido_paterno'] . ' ' . $usuario['apellido_materno'] . '
+                <h1>Examenes Registrados</h1>
                 </div>
             ';
-        foreach ($filas as $fila) {
+            /* if ($usuario->rowCount() > 0) {*/
+      
+        foreach ($registros as $fila) {
            echo "<tr>
             <td>{$fila['folio_examen']}</td>
             <td>{$fila['IDUsuario']}</td>
@@ -68,7 +73,7 @@
             <td>{$fila['fecha_aplicacion']}</td>
             <td>{$fila['hora_aplicacion']}</td>
             <td>{$fila['aula_aplicacion']}</td>
-            <td><a href='../archivos_php/modificar.php'>editar</a></td>
+            <td><a href='../archivos_php/modificar.php?folio_examen={$fila['folio_examen']}&aula_aplicacion={$fila['aula_aplicacion']}&{$fila['IDUsuario']}'>editar</a></td>
             <td><a href='../archivos_html/eliminar.html'>borrar</a></td>
             </tr>";
                 }
@@ -79,6 +84,7 @@
 } else {
         echo "<tr><td colspan='7'>Matrícula no encontrada.</td></tr>";
     }
+
 }
     ?>         
         </tbody>
