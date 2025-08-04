@@ -1,20 +1,20 @@
+
 body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
 
+/*
 #container {
     background-size: cover;
-    /* Hace que la imagen cubra toda la pantalla */
     background-repeat: no-repeat;
-    /* Evita que la imagen se repita */
     background-position: center;
-    /* Centra la imagen */
-    font-family: sans-serif;
+   font-family: sans-serif;
     margin: 0;
-}
+}*/
 
+/*
 .nav-link {
     font-size: 16px;
     color: white;
@@ -27,6 +27,7 @@ body {
     padding: 80px;
     width: 100%;
 }
+
 
 header {
     display: flex;
@@ -41,7 +42,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-}
+}*/
 
 #grid-container {
     display: grid;
@@ -109,7 +110,7 @@ th {
 }
 
 td {
-    background-color: transparent !important; /* Elimina colores de fondo opacos */
+    background-color: transparent !important; 
     padding: 10px;
     border: 1px solid #999;
     color: black;

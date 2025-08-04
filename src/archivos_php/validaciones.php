@@ -22,9 +22,6 @@ function Validacion_Registro_Usuario($arg1, $arg2, $arg3, $arg4, $arg5, $arg6, $
     if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}$/', $arg10)) {
     return "La contraseña debe tener al menos 8 caracteres, incluyendo letras, números y un carácter especial.";
     }
-
-
-
     return true;
 }
 

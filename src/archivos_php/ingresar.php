@@ -42,6 +42,7 @@ if (isset($_POST['ingresar'])) {
             include "nav.php"; // para mostrar la barra de navegación
             echo "¡BIENVENIDO {$usuario['nombre']} {$usuario['apellido_paterno']} {$usuario['apellido_materno']} 
              Has ingresado como {$usuario['tipo_usuario']} !";
+            
         } else {
             echo "IDUsuario o contraseña incorrectos.";
         }

@@ -35,14 +35,19 @@
       if (isset($_SESSION['usuario']['IDUsuario'])) {
         $idUsuario = $_SESSION['usuario']['IDUsuario'];
         $filas =  consultarExamenes($dbh, $idUsuario);
-      if (count($filas) > 0) {
-        $usuario = $filas[0]; 
-          echo '
-                <div style="text-align: center; margin-bottom: 10px;">
-                <strong>Estudiante:</strong> ' . $usuario['nombre'] . ' ' . $usuario['apellido_paterno'] . ' ' . $usuario['apellido_materno'] . '
-                </div>
-            ';
-        foreach ($filas as $fila) {
+      
+         // Obtener todos los resultados como array asociativo
+        $resultados = $filas->fetchAll(PDO::FETCH_ASSOC);
+
+        if (count($resultados) > 0) {
+        $usuario = $resultados[0]; 
+        echo '
+            <div style="text-align: center; margin-bottom: 10px;">
+            <strong>Estudiante:</strong> ' . htmlspecialchars($usuario['nombre']) . ' ' . htmlspecialchars($usuario['apellido_paterno']) . ' ' . htmlspecialchars($usuario['apellido_materno']) . '
+            </div>
+        ';
+        // Volver al primer registro para el foreach
+        foreach ($resultados as $fila) {
            echo "<tr>
             <td>{$fila['folio_examen']}</td>
             <td>{$fila['IDUsuario']}</td>

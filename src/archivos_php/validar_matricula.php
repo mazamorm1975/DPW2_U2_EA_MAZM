@@ -62,8 +62,7 @@
                 <h1>Examenes Registrados</h1>
                 </div>
             ';
-            /* if ($usuario->rowCount() > 0) {*/
-      
+         
         foreach ($registros as $fila) {
            echo "<tr>
             <td>{$fila['folio_examen']}</td>
@@ -74,7 +73,7 @@
             <td>{$fila['hora_aplicacion']}</td>
             <td>{$fila['aula_aplicacion']}</td>
             <td><a href='../archivos_php/modificar.php?folio_examen={$fila['folio_examen']}&aula_aplicacion={$fila['aula_aplicacion']}&{$fila['IDUsuario']}'>editar</a></td>
-            <td><a href='../archivos_html/eliminar.html'>borrar</a></td>
+            <td><a href='../archivos_php/eliminar.php?folio_examen={$fila['folio_examen']}'>borrar</a></td>
             </tr>";
                 }
             } else {

@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($fecha)) {
         $fecha = date('Y-m-d', strtotime($fecha));
     } else {
-        die('⚠️ Error: La fecha no puede estar vacía.');
+        die('Error: La fecha no puede estar vacía.');
     }
 
     // Ejecutar UPDATE
@@ -58,8 +58,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ':folio_examen_antiguo' => $folio_examen
     ]);
 
-    echo "<p style='color: green;'>✅ Registro actualizado correctamente.</p>";
+    echo "<p style='color: green;'>Registro actualizado correctamente.</p>";
 } else {
+    
     // Obtener datos del examen por folio/aula para mostrar en formulario
     if ($folio && $aula && $idUsuario) {
         $inquiry_results = consultarExamenesPorFolio($dbh, $folio, $aula, $idUsuario);
@@ -131,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" id="aula" name="aula" value="<?= htmlspecialchars($aula) ?>" />
         </div>
         <br>
-        <input type="submit" value="Modificar Registro" />
+      <input type="submit" value="Modificar Registro"/>
     </form>
 </body>
 </html>
