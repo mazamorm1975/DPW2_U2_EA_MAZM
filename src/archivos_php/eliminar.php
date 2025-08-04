@@ -7,7 +7,7 @@ include "validaciones.php";
 
 // Verifica sesión activa
 $idUsuario = $_SESSION['matricula_usuario'] ?? null;
- $folio_examen = $_GET['folio_examen'] ?? null;
+$folio_examen = $_POST['folio_examen'] ?? $_GET['folio_examen'] ?? null;
  
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    
@@ -46,8 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="../archivos_html/inicio.html">Iniciar Sesion</a>
 
         </nav>
-            <p>Sesión válida para el usuario: <?= htmlspecialchars($idUsuario) ?></p>
-        
+               
       <form action="eliminar.php?folio_examen=<?= urlencode($folio_examen) ?>" method="post">
            <div>
             <label for="folio_examen">Folio Examen:</label>
