@@ -1,6 +1,4 @@
 <?php
-
-// Cerrar sesión anterior (esto es lo que te falta)
 session_start();
 session_unset();
 session_destroy();
