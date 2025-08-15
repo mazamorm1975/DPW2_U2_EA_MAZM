@@ -2,6 +2,9 @@
 session_start();
 include "conexion.php";
 
+$tipo_usuario = $_SESSION['usuario']['IDUsuario'];
+
+
 $folio_examen = '';
 $id_usuario = '';
 $asignatura = '';
@@ -67,10 +70,8 @@ if ($dbh != null) {
 
 <body>
     <header>
-        <nav>
-        <a href="../archivos_html/index.html">Inicio</a>
-        <a href="../archivos_html/registro.html">Registrarse</a>
-        <a href="../archivos_html/inicio.html">Iniciar Sesion</a>
+        <nav>        
+            <?php include "nav.php" ?>
         </nav>
     </header>
     <form action="registrar_examenes.php?folio_examen=<?= urlencode($folio_examen) ?>" method="post">

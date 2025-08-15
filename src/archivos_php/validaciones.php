@@ -43,6 +43,8 @@ function validarTipoUsuario($conexion, $arg1){
     return $existe > 0;
 }
 
+
+
 function consultarExamenes($conexion, $idUsuario) {
     $sql = "SELECT t2.*, t1.nombre, t1.apellido_paterno, t1.apellido_materno
                 FROM examenes t2
