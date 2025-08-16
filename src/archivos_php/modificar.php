@@ -3,6 +3,8 @@ session_start();
 include "conexion.php";
 include "validaciones.php";
 
+
+
 // Verifica sesión activa
 $idUsuario = $_SESSION['matricula_usuario'] ?? null;
 $folio = $_GET['folio_examen'] ?? null;
@@ -87,9 +89,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body>
     <header>
         <nav>
-            <a href="../archivos_html/index.html">Inicio</a>
+           <!--<a href="../archivos_html/index.html">Inicio</a>
             <a href="../archivos_html/registro.html">Registrarse</a>
-            <a href="../archivos_html/inicio.html">Iniciar Sesión</a>
+            <a href="../archivos_html/inicio.html">Iniciar Sesión</a>-->
+            <?php include "nav.php"; ?>
         </nav>
     </header>
 

@@ -1,3 +1,9 @@
+<?php
+session_start();
+include "conexion.php";
+$_SESSION['usuario']['IDUsuario'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,9 +15,10 @@
 
 <body>
     <nav>
-        <a href="../archivos_html/index.html">Inicio</a>
+      <!--<a href="../archivos_html/index.html">Inicio</a>
         <a href="../archivos_html/registro.html">Registrarse</a>
-        <a href="../archivos_html/inicio.html">Iniciar Sesion</a>
+        <a href="../archivos_html/inicio.html">Iniciar Sesion</a>-->
+        <?php include "nav.php"; ?>
     </nav>
     <h1>Consulta Examenes Registrados</h1>
  
@@ -29,7 +36,7 @@
         </thead>
         <tbody>
     <?php
-      session_start();
+      
       include "conexion.php";
       include "validaciones.php";
       if (isset($_SESSION['usuario']['IDUsuario'])) {

@@ -2,7 +2,7 @@
 session_start();
 include "conexion.php";
 
-$tipo_usuario = $_SESSION['usuario']['IDUsuario'];
+$_SESSION['usuario']['IDUsuario'];
 
 
 $folio_examen = '';
