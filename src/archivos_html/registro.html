@@ -9,15 +9,20 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
     crossorigin="anonymous"></script>
+
   <title>Registrar</title>
 </head>
 
 <body class="bg-light">
+
   <header class="mb-4">
     <nav class="menu-nav p-3 bg-dark text-white">
-      <a href="index.html" class="nav-link d-inline text-white">Salir</a>
-      <a href="inicio.html" class="nav-link d-inline text-white">Inicio</a>
-      <a href="ingresar.html" class="nav-link d-inline text-white">Iniciar Sesión</a>
+      <a href="index.html" class="nav-link d-inline text-white" data-bs-toggle="tooltip" data-bs-placement="bg-light"
+        data-bs-custom-class="custom-tooltip" data-bs-title="Salir a la pagina de inicio.">Salir</a>
+      <a href="inicio.html" class="nav-link d-inline text-white" data-bs-toggle="tooltip" data-bs-placement="bg-light"
+        data-bs-custom-class="custom-tooltip" data-bs-title="Ir a la pagina inicial.">Inicio</a>
+      <a href="ingresar.html" class="nav-link d-inline text-white" data-bs-toggle="tooltip" data-bs-placement="bg-light"
+        data-bs-custom-class="custom-tooltip" data-bs-title="Dirigue al Login.">Iniciar Sesión</a>
     </nav>
   </header>
 
@@ -29,39 +34,46 @@
       <div class="col-12 col-lg-10">
         <form id="form1" action="../archivos_php/guardar.php" method="post">
           <div class="row g-3">
-            
+
             <div class="col-12 col-md-6 col-lg-4">
               <label for="IDUsuario" class="form-label">Id_Usuario</label>
-              <input type="text" name="IDUsuario" id="IDUsuario" class="form-control">
+              <input type="text" name="IDUsuario" id="IDUsuario" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el ID De Usuario.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="nombre" class="form-label">Nombre</label>
-              <input type="text" name="nombre" id="nombre" class="form-control">
+              <input type="text" name="nombre" id="nombre" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el nombre.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="apellido_paterno" class="form-label">Apellido Paterno</label>
-              <input type="text" name="apellido_paterno" id="apellido_paterno" class="form-control">
+              <input type="text" name="apellido_paterno" id="apellido_paterno" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el apellido paterno.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="apellido_materno" class="form-label">Apellido Materno</label>
-              <input type="text" name="apellido_materno" id="apellido_materno" class="form-control">
+              <input type="text" name="apellido_materno" id="apellido_materno" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el apellido materno.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="edad" class="form-label">Edad</label>
-              <input type="text" name="edad" id="edad" class="form-control">
+              <input type="text" name="edad" id="edad" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar la edad.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label class="form-label d-block">Sexo</label>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Dar click si el sexo es masculino">
                 <input class="form-check-input" type="radio" id="masculino" name="sexo" value="M" checked>
                 <label class="form-check-label" for="masculino">Masculino</label>
               </div>
-              <div class="form-check form-check-inline">
+              <div class="form-check form-check-inline" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Dar click si el sexo es femenino.">
                 <input class="form-check-input" type="radio" id="femenino" name="sexo" value="F">
                 <label class="form-check-label" for="femenino">Femenino</label>
               </div>
@@ -69,31 +81,37 @@
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="email" class="form-label">Email</label>
-              <input type="text" name="email" id="email" class="form-control">
+              <input type="text" name="email" id="email" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el correo electrónico.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="telefono" class="form-label">Teléfono</label>
-              <input type="text" name="telefono" id="telefono" class="form-control">
+              <input type="text" name="telefono" id="telefono" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el número telefónico a 10 dígitos.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="tipo_usuario" class="form-label">Tipo Usuario</label>
-              <input type="text" name="tipo_usuario" id="tipo_usuario" class="form-control">
+              <input type="text" name="tipo_usuario" id="tipo_usuario" class="form-control"   data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el tipo de usuario.">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="password" class="form-label">Password</label>
-              <input type="password" name="password" id="password" class="form-control">
+              <input type="password" name="password" id="password" class="form-control"   data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="La contraseña de contar con letras y números y por lo menos un carácter especial (#,$,-,_,&,%).">
             </div>
 
             <div class="col-12 col-md-6 col-lg-4">
               <label for="confirmar" class="form-label">Confirmar Password</label>
-              <input type="password" name="confirmar" id="confirmar" class="form-control">
+              <input type="password" name="confirmar" id="confirmar" class="form-control" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Confirmar la contraseña.">
             </div>
 
             <div class="col-12">
-              <button type="submit" name="registrar" class="btn btn-primary w-100">Registrar</button>
+              <button type="submit" name="registrar" class="btn btn-primary w-100" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Confirmar contraseña.">Registrar</button>
             </div>
 
           </div>
@@ -101,6 +119,10 @@
       </div>
     </div>
   </div>
+  <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
 </body>
 
 </html>

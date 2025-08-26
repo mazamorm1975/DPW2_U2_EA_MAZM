@@ -22,7 +22,7 @@ $_SESSION['usuario']['IDUsuario'];
     </nav>
     <h1>Consulta Examenes Registrados</h1>
  
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th scope="col">Folio del examen</th>

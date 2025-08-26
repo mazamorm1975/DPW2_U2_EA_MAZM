@@ -4,43 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 
-<body>
+<body class="bg-light">
+    <header>
+        <nav class="menu-nav p-3 bg-dark text-white">
 
-    <form id="form2" action="../archivos_php/ingresar.php" method="post">
+            <a href="index.html" class="nav-link d-inline text-white">Inicio</a>
+            <a href="registro.html" class="nav-link d-inline text-white">Registrarse</a>
+            <a href="inicio.html" class="nav-link d-inline text-white">Iniciar Sesion</a>
 
-        <header>
-            <nav>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
 
-                <a href="index.html">Inicio</a>
-                <a href="registro.html">Registrarse</a>
-                <a href="inicio.html">Iniciar Sesion</a>
+                <form id="form2" action="../archivos_php/ingresar.php" method="post">
+                    <div class="row g-3">
+                        <h1 class="text-center mb-4">Login</h1>
 
-            </nav>
-        </header>
-        <h1>Login</h1>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label>Usuario</label>
+                            <input type="text" name="IDUsuario" placeholder="Ingrese su usuario" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar el usuario.">
 
-        <div>
-            <label>Usuario</label>
-            <input type="text" name="IDUsuario"   placeholder="Ingrese su usuario">
+                        </div>
+                        <br>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <label>Contraseña</label>
+                            <input type="password" name="password" placeholder="Ingrese su contraseña" data-bs-toggle="tooltip"
+                data-bs-placement="bottom" data-bs-custom-class="custom-tooltip" data-bs-title="Ingresar la contraseña.">
 
+                        </div>
+                        <br>
+                        <div class="col-12">
+                            <input type="submit" class="btn btn-primary w-100" name="ingresar" value="Ingresar" />
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <br>
-        <div>
-            <label>Contraseña</label>
-            <input type="password" name="password"   placeholder="Ingrese su contraseña">
-
-        </div>
-        <br>
-        <div>
-            <input type="submit" name="ingresar" value="Ingresar" />
-        </div>
-
-
-    </form>
-
+    </div>
+    <script>
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
 </body>
 
 </html>
