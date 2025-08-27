@@ -39,6 +39,7 @@
             </thead>
             <tbody>
             <?php
+             session_start();
               include "conexion.php";
               include "validaciones.php";
 

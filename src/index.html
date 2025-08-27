@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--<link rel="stylesheet" href="../assets/style.css">-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <title>DPW2_U2_A2_MAZM</title>
+</head>
+
+<body id="container">
+
+  <header>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+
+      <!--Se agrega boton toggler-->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a href="inicio.html" class="nav-link">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a href="registro.html" class="nav-link">Registrarse</a>
+          </li>
+          <li class="nav-item">
+            <a href="ingresar.html" class="nav-link">Iniciar Sesión</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Se inicia la implementación de componente carrusel-->
+
+    <div class="d-flex justify-content-center align-items-center vh-100">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+            aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+            aria-label="Slide 5"></button>
+        </div>
+
+        <div class="carousel-inner text-center">
+          <div class="carousel-item active" data-bs-interval="10000">
+            <h1>Alumnado</h1>
+            <img src="../assets/alumnado.jpg" class="d-block mx-auto"
+              style="max-width:600px; height:auto; cursor:pointer;" alt="..." data-bs-toggle="modal"
+              data-bs-target="#imageModal" data-img="../assets/alumnado.jpg"
+              data-caption="En el instituto Héroes de la Nación formamos estudiantes de primer nivel.">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h1>Biblioteca</h1>
+            <img src="../assets/alumnos-biblioteca.jpg" class="d-block mx-auto" style="max-width:600px; height:auto;"
+              alt="..." cursor:pointer; alt="..." data-bs-toggle="modal" data-bs-target="#imageModal"
+              data-img="../assets/alumnos-biblioteca.jpg"
+              data-caption="Nuestra biblioteca cuenta con una amplia variedad de recursos para el estudio.">
+          </div>
+          <div class="carousel-item" data-bs-interval="2000">
+            <h1>Actividades Deportivas</h1>
+            <img src="../assets/alumnos-karate.jpg" class="d-block mx-auto" style="max-width:600px; height:auto;"
+              alt="..." cursor:pointer; alt="..." data-bs-toggle="modal" data-bs-target="#imageModal"
+              data-img="../assets/alumnos-karate.jpg"
+              data-caption="Fomentamos el deporte y la vida saludable entre nuestros estudiantes.">
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+            <h1>Cafeteria</h1>
+            <img src="../assets/cafeteria.jpg" class="d-block mx-auto" style="max-width:600px; height:auto;" alt="..."
+              cursor:pointer; alt="..." data-bs-toggle="modal" data-bs-target="#imageModal"
+              data-img="../assets/cafeteria.jpg"
+              data-caption="Contamos con cafeteria dentro del campus con alimentos sanos y de primera calidad">
+          </div>
+
+          <div class="carousel-item" data-bs-interval="2000">
+            <h1>Simposios</h1>
+            <img src="../assets/simposios.jpg" class="d-block mx-auto" style="max-width:600px; height:auto;" alt="..."
+              cursor:pointer; alt="..." data-bs-toggle="modal" data-bs-target="#imageModal"
+              data-img="../assets/simposios.jpg"
+              data-caption="Realizamos varios simposios con expertos de todo el mundo para incrementar el conocimiento de nuestros alumnos.">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+      </div>
+    </div>
+
+    <!-- Modal (ventana emergente con imagen grande) -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body text-center" position="relative">
+            <img id="modalImage" src="" class="img-fluid rounded shadow-lg" alt="Imagen grande">
+            <h1 id="modalCaption" class="text-white mt-3"></h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Script para pasar la imagen al modal -->
+    <script>
+      const imageModal = document.getElementById('imageModal');
+      imageModal.addEventListener('show.bs.modal', function (event) {
+        const img = event.relatedTarget; // imagen clickeada
+        const src = img.getAttribute('data-img');
+        const caption = img.getAttribute('data-caption');
+        const modalImg = document.getElementById('modalImage');
+        document.getElementById('modalCaption').textContent = caption;
+        modalImg.src = src;
+      });
+    </script>
+
+  </header>
+
+  <div class="container mt-2">
+    <div class="row g-4">
+
+      <!-- Tarjeta 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="../assets/bibliotecas.jpg" class="card-img-top" alt="Biblioteca">
+          <div class="card-body">
+            <h5 class="card-title">Biblioteca</h5>
+            <p class="card-text">Accede a nuestros libros, revistas y recursos digitales.</p>
+            <a href="#" class="btn btn-primary">Saber más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="../assets/orientacion-educativa.jpg" class="card-img-top" alt="Orientación académica">
+          <div class="card-body">
+            <h5 class="card-title">Orientación académica</h5>
+            <p class="card-text">Asesoría personalizada para tu desempeño académico.</p>
+            <a href="#" class="btn btn-primary">Saber más</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12">
+        <div class="card h-100">
+          <img src="../assets/extension-universitaria.jpg" class="card-img-top" alt="Extensión universitaria">
+          <div class="card-body">
+            <h5 class="card-title">Extensión universitaria</h5>
+            <p class="card-text">Participa en programas y talleres fuera del campus.</p>
+            <a href="#" class="btn btn-primary">Saber más</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+</body>
+
+
+</html>
