@@ -35,6 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <title>Eliminar_Registros</title>
 </head>
 
@@ -47,16 +52,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <a href="../archivos_html/inicio.html">Iniciar Sesion</a>-->
             <?php include "nav.php"; ?>
         </nav>
-               
+                  <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10"> 
       <form action="eliminar.php?folio_examen=<?= urlencode($folio_examen) ?>" method="post">
-           <div>
+         <div class="row g-3">
+              <h1 class="text-center mb-4">Eliminación de registro</h1>
+           <div class="col-12 col-md-6 col-lg-4">
             <label for="folio_examen">Folio Examen:</label>
             <input type="text" id="folio_examen" name="folio_examen" value="<?= htmlspecialchars($folio_examen) ?>"/>
-        </div>
+        </div class="col-12">
         <br>           
-            <input type="submit" value="Eliminar Registro"/>
+            <input type="submit" class="btn btn-primary w-100" value="Ejecutar Acción"/>
+        </div>
       </form>
-
+        </div>
+        </div>
+        </div>
 </body>
 
 </html>

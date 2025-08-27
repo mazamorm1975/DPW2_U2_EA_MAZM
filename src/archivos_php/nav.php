@@ -1,6 +1,5 @@
 <?php
 
-
 if (isset($_SESSION['usuario']) && $_SESSION['usuario']['tipo_usuario'] === 'ES') {
     echo '
     <head>
